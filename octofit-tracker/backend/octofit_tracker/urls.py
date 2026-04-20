@@ -56,5 +56,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include((router.urls, 'api'))),
     path('', api_root, name='api-root'),
+    # For modern API docs, use the OpenAPI schema endpoint below with Swagger UI or Redoc
     path('schema/', get_schema_view(title='OctoFit Tracker API', description='API for all endpoints', version='1.0.0'), name='openapi-schema'),
 ]
